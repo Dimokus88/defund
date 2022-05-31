@@ -47,7 +47,7 @@ Before you start - subscribe to our news channels:
 
 В поле ***my_root_password*** - задаем пароль root для подключения по ssh.
 
-В поле ***MONIKER*** - вставляем имя ноды.
+В поле ***MONIKER*** - задаем имя ноды.
 
 В поле ***MNEMONIС*** - вставляем мнемоник фразу от вашего кошелька Defund.
 
@@ -116,7 +116,7 @@ Before you start - subscribe to our news channels:
 
 В поле ***my_root_password*** - задаем пароль root для подключения по ssh.
 
-В поле ***MONIKER*** - вставляем имя ноды.
+В поле ***MONIKER*** - указываем имя ноды.
 
 В поле ***MNEMONIС*** - вставляем мнемоник фразу от вашего кошелька Defund.
 
