@@ -25,14 +25,16 @@ Before you start - subscribe to our news channels:
 [English version](https://github.com/Dimokus88/oasys/blob/main/README.md#english-version) | [Русская версия](https://github.com/Dimokus88/defund#%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F)
   
 </div>
+
 # English version
+
 > Если хотите перенести вашу ноду на Akash, или у вас есть priv_validator_key.json, то перейдите [к этому пункту](https://github.com/Dimokus88/defund#2-%D0%B5%D1%81%D0%BB%D0%B8-%D1%83-%D0%B2%D0%B0%D1%81-%D0%B5%D1%81%D1%82%D1%8C-priv_validator_keyjson).
 
 >You must have more than ***5 AKT*** on your Akash wallet (5 АКТ will be blocked for deployment + transaction gas payment). АКТ can be found on the exchanges Gate, AsendeX, Osmosis . Also in our community[Akash RU](https://t.me/akash_ru) we regularly hold events in which we distribute АКТ.
 
-## 1. Если запуск производится впервые:
+## If starting for the first time:
 
-***Создайте дополнительный кошелек экосистемы Cosmos для проекта Defund, с помощью Keplr или Cosmostation. Перепишите seed фразу от созданного кошелька, она понадобится нам при развертке.***
+***Create an additional Cosmos ecosystem wallet for the Defund project using Keplr or Cosmostation. Rewrite the seed phrase from the created wallet, we will need it when deploying.***
 
 * Open ***Akashlytics***,if you don't have it installed, then [link for download](https://www.akashlytics.com/deploy).
 
@@ -40,24 +42,121 @@ Before you start - subscribe to our news channels:
 
 ![image](https://user-images.githubusercontent.com/23629420/165339432-6f053e43-4fa2-4429-8eb7-d2fc66f47c70.png)
 
-* Click ***CREATE DEPLOYMENT***. Select ***Empty*** and copy the contents there [deploy.yml]
+* Click ***CREATE DEPLOYMENT***. Select ***Empty*** and copy the contents there [deploy.yml](https://github.com/Dimokus88/defund/blob/main/deploy.yml)
 
-Let's take a look at what is there, so the ```services``` section indicates the ```docker``` node image, as well as a block with environment variables ```env```:
+* Let's take a look at what is there, so the ```services``` section indicates the ```docker``` node image, as well as a block with environment variables ```env```:
 
 * ```my_root_password``` - password  ```root``` user, for connection to container via ```ssh```.
 * ```MONIKER```       - Node name .
 * ```MNEMONIС```      -  insert the mnemonic phrase from your wallet ***Defund***.
 * ```LINK_ADDRBOOK```       - link addrbook.json
 * ```SNAP_RPC```      - link RPC node.
-> ***LINK_KEY*** -  comment out the link to the hosted priv_validator_key.json (direct download). If you do not have this file, comment out the line with the # symbol.
+> ```LINK_KEY``` -  comment out the env to the priv_validator_key.json. 
 
+In the ```resources``` field, we set the capacity to be rented. ```2 CPU x 4 GB RAM x 600 GB SSD``` recommended for ***Defund*** node. In case of synchronization with ***RPC*** nodes, we do not store the full blockchain, so you can put ```2 CPU x 4 GB RAM x 100 GB SSD```.
+
+* Click on ```CREATE DEPLOYMENT``` and we are waiting for the appearance of providers with free capacities (BIDS).
+
+![image](https://user-images.githubusercontent.com/23629420/165608527-da85c84e-edcc-4b15-8843-441d3e76dcb6.png)
+
+
+* We choose the one that suits us in terms of price and equipment. Then we press ```ACCEPT BID```.
+
+We are waiting for the completion of the deployment.
+
+* In the ```LOGS``` tab, wait for a message about the generated file ```priv_validator_key.json``` .
+
+<div align="center">
+  
+![image](https://user-images.githubusercontent.com/23629420/171126372-81330266-8f01-47a9-a85e-68d1e2ada758.png)
+  
+</div>
+
+* In the ```SHELL``` tab, run the command```cat /root/.defund/config/priv_validator_key.json```, save the answer in a file```priv_validator_key``` with extension```.json```.
+
+<div align="center">
+  
+![image](https://user-images.githubusercontent.com/23629420/171126676-cf1a436e-ca56-43f6-ae53-66608d812534.png)
+  
+</div>
+
+> Then open access to the file on google drive and copy its link, it will look like:
+```https://drive.google.com/open?id=xxxxxxxxxxxxxx-xxxxxxxxxxxx&authuser=gmail%40gmail.com&usp=drive_fs```
+ you need to take a part: ```id=xxxxxxxxxxxxxx-xxxxxxxxxxxx``` and put in front of it: ```https://drive.google.com/uc?export=download&```.  
+Thus, you will get a link to a direct download of the file:
+```https://drive.google.com/uc?export=download&id=xxxxxxxxxxxxxx-xxxxxxxxxxxx```
+
+* Go to the ```UPDATE``` tab, uncomment the ***LINK_KEY*** line (remove the # symbol) and paste the link to directly download your ```priv_validator_key.json``` file. Then click ```UPDATE DEPLOYMENT```. Confirm the transaction.
+
+*In the process of work, your address ***Defund*** will be displayed, you need to request tokens to it. Everything is difficult with a crane, there is a resource https://bitszn.com/faucets.html , may give something. If not, then go to [Discord](https://discord.gg/hXAU3Dgp) and ask for tokens to your ***Defund*** address there.
+
+<div align="center">
+  
+![image](https://user-images.githubusercontent.com/23629420/171135278-a5465f9e-8bab-4767-b724-120abde07bc1.png)
+ 
+</div>
+
+* In the ```LOGS``` tab , you can view the operation of the node. Synchronization will start from the block that is ***2000*** blocks "below" the last one. For example, if there are ***596562*** blocks in the network at the time the node is launched, then synchronization and "catching up" will start from 596562-2000= ***594562*** blocks. After full synchronization, a validator will be created (***if it has not been created earlier***) and the node will enter the automatic mode of operation. Every ***5 minutes*** the balance will be checked, and if it is positive - auto-delegation to yourself. There will also be a check on the jail, the exit from the jail will be performed automatically.
+
+[Go to start](https://github.com/Dimokus88/defund#defund-validator-node-on-akash-network)
+
+### Thank you for choosing Akash Network!
+
+## If you have priv_validator_key.json
+
+> Then open access to the file on google drive and copy its link, it will look like:
+```https://drive.google.com/open?id=xxxxxxxxxxxxxx-xxxxxxxxxxxx&authuser=gmail%40gmail.com&usp=drive_fs```
+ you need to take a part: ```id=xxxxxxxxxxxxxx-xxxxxxxxxxxx``` and put in front of it: ```https://drive.google.com/uc?export=download&```.  
+Thus, you will get a link to a direct download of the file:
+```https://drive.google.com/uc?export=download&id=xxxxxxxxxxxxxx-xxxxxxxxxxxx```
+
+* Open ***Akashlytics***,if you don't have it installed, then [link for download](https://www.akashlytics.com/deploy).
+
+* We check the presence of a balance  ***(>5АКТ)*** and the presence of an installed certificate.
+
+![image](https://user-images.githubusercontent.com/23629420/165339432-6f053e43-4fa2-4429-8eb7-d2fc66f47c70.png)
+
+* Click ***CREATE DEPLOYMENT***. Select ***Empty*** and copy the contents there [deploy.yml](https://github.com/Dimokus88/defund/blob/main/deploy.yml)
+
+* Let's take a look at what is there, so the ```services``` section indicates the ```docker``` node image, as well as a block with environment variables ```env```:
+
+* ```my_root_password``` - password  ```root``` user, for connection to container via ```ssh```.
+* ```MONIKER```       - Node name .
+* ```MNEMONIС```      -  insert the mnemonic phrase from your wallet ***Defund***.
+* ```LINK_ADDRBOOK```       - link addrbook.json
+* ```SNAP_RPC```      - link RPC node.
+* ```LINK_KEY``` -  paste the link to the hosted priv_validator_key.json (direct download).
+
+In the ```resources``` field, we set the capacity to be rented. ```2 CPU x 4 GB RAM x 600 GB SSD``` recommended for ***Defund*** node. In case of synchronization with ***RPC*** nodes, we do not store the full blockchain, so you can put ```2 CPU x 4 GB RAM x 100 GB SSD```.
+
+* Click on ```CREATE DEPLOYMENT``` and we are waiting for the appearance of providers with free capacities (BIDS).
+
+![image](https://user-images.githubusercontent.com/23629420/165608527-da85c84e-edcc-4b15-8843-441d3e76dcb6.png)
+
+* We choose the one that suits us in terms of price and equipment. Then we press ```ACCEPT BID```.
+
+We are waiting for the completion of the deployment.
+
+* In the ```LOGS```  tab , you can view the operation of the node. Synchronization will start from the block that is ***2000*** blocks "below" the last one. For example, if there are ***596562*** blocks in the network at the time the node is launched, then synchronization and "catching up" will start from 596562-2000= ***594562*** blocks. After full synchronization, a validator will be created (***if it has not been created earlier***) and the node will enter the automatic mode of operation. Every ***5 minutes*** the balance will be checked, and if it is positive - auto-delegation to yourself. There will also be a check on the jail, the exit from the jail will be performed automatically.
+
+* In the process of work, your address ***Defund*** will be displayed, you need to request tokens to it. Everything is difficult with a crane, there is a resource https://bitszn.com/faucets.html , may give something. If not, then go to [Discord](https://discord.gg/hXAU3Dgp) and ask for tokens to your ***Defund*** address there.
+
+<div align="center">
+  
+![image](https://user-images.githubusercontent.com/23629420/171135278-a5465f9e-8bab-4767-b724-120abde07bc1.png)
+ 
+</div>
+
+[Go to start](https://github.com/Dimokus88/defund#defund-validator-node-on-akash-network)
+
+### Thank you for choosing Akash Network!
 
 # Русская версия
 > Если хотите перенести вашу ноду на Akash, или у вас есть priv_validator_key.json, то перейдите [к этому пункту](https://github.com/Dimokus88/defund#2-%D0%B5%D1%81%D0%BB%D0%B8-%D1%83-%D0%B2%D0%B0%D1%81-%D0%B5%D1%81%D1%82%D1%8C-priv_validator_keyjson).
 
 > На вашем кошельке ```Akash``` (с которого будет разворачивать ***Defund***) должно быть более ***5 АКТ*** (5 АКТ будут заблокированы на развертывание + оплата газа транзакций). АКТ можно пробрести на биржах ```Gate```, ```AsendeX```, ```Osmosis``` . Так же в нашем сообществе [Akash RU](https://t.me/akash_ru) мы регулярно проводим эвенты в которых раздаем АКТ.
 
-## 1. Если запуск производится впервые:
+## Если запуск производится впервые:
 
 ***Создайте дополнительный кошелек экосистемы Cosmos для проекта Defund, с помощью Keplr или Cosmostation. Перепишите seed фразу от созданного кошелька, она понадобится нам при развертке.***
 
@@ -132,7 +231,7 @@ Let's take a look at what is there, so the ```services``` section indicates the 
 
 ### Спасибо что используете Akash Network!
 
-## 2. Если у вас есть priv_validator_key.json
+## Если у вас есть priv_validator_key.json
 
 > Откройте доступ к файлу на google диск и скопируйте его ссылку, она будет вида:
 ```https://drive.google.com/open?id=xxxxxxxxxxxxxx-xxxxxxxxxxxx&authuser=gmail%40gmail.com&usp=drive_fs```
@@ -160,14 +259,13 @@ Let's take a look at what is there, so the ```services``` section indicates the 
 
 В поле ***LINK_ADDRBOOK*** - ссылка на скачивание адресной книги пиров .
 
-В поле ***SNAP_RPC*** - ссылка на ***RPC*** ноду, для начала синхронизации с последних блоков (рекомендуется) .
+В поле ***SNAP_RPC*** - ссылка на ***RPC*** ноду, для начала синхронизации с последних блоков.
 
 Ниже, в поле ```resources``` мы выставляем арендуюмую мощность. для ноды ***Defund*** рекомендуется ```2 CPU x 4 GB RAM x 600 GB SSD```. В случае синхронизации с ***RPC*** ноды - мы храним не полный блокчейн, поэтому можно поставить  ```2 CPU x 4 GB RAM x 100 GB SSD```. 
 
 Нажимаем кнопку ```CREATE DEPLOYMENT``` и ждем появления провайдеров, со свободными мощностями (***BIDS***).
 
 ![image](https://user-images.githubusercontent.com/23629420/165608527-da85c84e-edcc-4b15-8843-441d3e76dcb6.png)
-
 
 * Выбираем подходящий для нас по цене и оборудованию. После чего нажимаем ```ACCEPT BID```.
 
