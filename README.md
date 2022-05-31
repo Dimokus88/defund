@@ -22,12 +22,12 @@ Before you start - subscribe to our news channels:
 </div>
 <div align="center">
   
-[English version](https://github.com/Dimokus88/oasys/blob/main/README.md#english-version) | [Русская версия](https://github.com/Dimokus88/oasys/blob/main/README.md#%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F)
+[English version](https://github.com/Dimokus88/oasys/blob/main/README.md#english-version) | [Русская версия](https://github.com/Dimokus88/defund#%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F)
   
 </div>
 
 # Русская версия
-> Если хотите перенести вашу ноду на Akash, или у вас есть priv_validator_key.json, то перейдите к этому пункту.
+> Если хотите перенести вашу ноду на Akash, или у вас есть priv_validator_key.json, то перейдите [к этому пункту](https://github.com/Dimokus88/defund#2-%D0%B5%D1%81%D0%BB%D0%B8-%D1%83-%D0%B2%D0%B0%D1%81-%D0%B5%D1%81%D1%82%D1%8C-priv_validator_keyjson).
 
 ## 1. Если запуск производится впервые:
 
