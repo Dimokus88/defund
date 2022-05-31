@@ -59,7 +59,7 @@ Before you start - subscribe to our news channels:
 
 Ниже, в поле ```resources``` мы выставляем арендуюмую мощность. для ноды ***Defund*** рекомендуется ```2 CPU x 4 GB RAM x 300 GB SSD```. В случае синхронизации с ***RPC*** ноды - мы храним не полный блокчейн, поэтому можно поставить  ```2 CPU x 4 GB RAM x 100 GB SSD```. 
 
-Нажимаем кнопку ```CREATE DEPLOYMENT``` и ждем появления провайдеров, со свободными мощностями (BIDS).
+Нажимаем кнопку ```CREATE DEPLOYMENT``` и ждем появления провайдеров, со свободными мощностями (***BIDS***).
 
 ![image](https://user-images.githubusercontent.com/23629420/165608527-da85c84e-edcc-4b15-8843-441d3e76dcb6.png)
 
@@ -128,7 +128,7 @@ Before you start - subscribe to our news channels:
 
 Ниже, в поле ```resources``` мы выставляем арендуюмую мощность. для ноды ***Defund*** рекомендуется ```2 CPU x 4 GB RAM x 300 GB SSD```. В случае синхронизации с ***RPC*** ноды - мы храним не полный блокчейн, поэтому можно поставить  ```2 CPU x 4 GB RAM x 100 GB SSD```. 
 
-Нажимаем кнопку ```CREATE DEPLOYMENT``` и ждем появления провайдеров, со свободными мощностями (BIDS).
+Нажимаем кнопку ```CREATE DEPLOYMENT``` и ждем появления провайдеров, со свободными мощностями (***BIDS***).
 
 ![image](https://user-images.githubusercontent.com/23629420/165608527-da85c84e-edcc-4b15-8843-441d3e76dcb6.png)
 
