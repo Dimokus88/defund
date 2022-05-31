@@ -91,7 +91,7 @@ Thus, you will get a link to a direct download of the file:
 
 * Go to the ```UPDATE``` tab, uncomment the ***LINK_KEY*** line (remove the # symbol) and paste the link to directly download your ```priv_validator_key.json``` file. Then click ```UPDATE DEPLOYMENT```. Confirm the transaction.
 
-*In the process of work, your address ***Defund*** will be displayed, you need to request tokens to it. Everything is difficult with a crane, there is a resource https://bitszn.com/faucets.html , may give something. If not, then go to [Discord](https://discord.gg/hXAU3Dgp) and ask for tokens to your ***Defund*** address there.
+*In the process of work, your address ***Defund*** will be displayed, you need to request tokens to it. Everything is difficult with a faucet, there is a resource https://bitszn.com/faucets.html , may give something. If not, then go to [Discord](https://discord.gg/hXAU3Dgp) and ask for tokens to your ***Defund*** address there.
 
 <div align="center">
   
@@ -144,7 +144,7 @@ We are waiting for the completion of the deployment.
 
 * In the ```LOGS```  tab , you can view the operation of the node. Synchronization will start from the block that is ***2000*** blocks "below" the last one. For example, if there are ***596562*** blocks in the network at the time the node is launched, then synchronization and "catching up" will start from 596562-2000= ***594562*** blocks. After full synchronization, a validator will be created (***if it has not been created earlier***) and the node will enter the automatic mode of operation. Every ***5 minutes*** the balance will be checked, and if it is positive - auto-delegation to yourself. There will also be a check on the jail, the exit from the jail will be performed automatically.
 
-* In the process of work, your address ***Defund*** will be displayed, you need to request tokens to it. Everything is difficult with a crane, there is a resource https://bitszn.com/faucets.html , may give something. If not, then go to [Discord](https://discord.gg/hXAU3Dgp) and ask for tokens to your ***Defund*** address there.
+* In the process of work, your address ***Defund*** will be displayed, you need to request tokens to it. Everything is difficult with a faucet, there is a resource https://bitszn.com/faucets.html , may give something. If not, then go to [Discord](https://discord.gg/hXAU3Dgp) and ask for tokens to your ***Defund*** address there.
 
 <div align="center">
   
