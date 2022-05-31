@@ -3,7 +3,7 @@ version: "2.0"
 
 services:
   app:
-    image: dimokus88/defund:1.0.0
+    image: dimokus88/defund:1.0.1
 
     
     env:
