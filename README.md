@@ -284,3 +284,27 @@ We are waiting for the completion of the deployment.
 [Перейти к началу](https://github.com/Dimokus88/defund#defund-validator-node-on-akash-network)
 
 ### Спасибо что используете Akash Network!
+
+___
+
+#### Useful Commands | Полезные команды
+
+Node status | Статус ноды
+
+```curl -s localhost:26657/status``` node status
+
+Checking balance | Проверка баланса
+
+```defundd q bank balances your_defund_address``` 
+
+Distribution withdraw rewards | Вывод комиссионных
+
+```defundd tx distribution withdraw-rewards your_valoper --from your_defund_address --chain-id defund-private-1 --fees 5ufetf --commission -y``` 
+
+Send tokens | Отправка токенов
+
+```defundd tx bank send name_wallet your_defund_address 1001000ufetf --fees 5ufetf --chain-id defund-private-1 -y```
+
+Voting | Голосование
+
+```defundd tx gov vote 1 yes --from your_defund_address --fees 555ufetf```
