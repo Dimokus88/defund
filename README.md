@@ -298,6 +298,9 @@ ___
 
 #### Useful Commands | Полезные команды
 
+Для ввода команд используйте вкладку ```SHELL``` пользовательского интерфейса ***Akashlytics*** .
+Use the ```SHELL``` tab of the ***Akashlytics*** user interface to enter commands.
+
 Node status | Статус ноды
 
 ```curl -s localhost:26657/status``` node status
