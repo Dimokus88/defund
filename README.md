@@ -49,7 +49,7 @@ Before you start - subscribe to our news channels:
 
 В поле ***MONIKER*** - задаем имя ноды.
 
-В поле ***MNEMONIС*** - вставляем мнемоник фразу от вашего кошелька Defund.
+В поле ***MNEMONIС*** - вставляем мнемоник фразу от вашего кошелька ***Defund***.
 
 В поле ***LINK_ADDRBOOK*** - ссылка на скачивание адресной книги пиров .
 
@@ -128,7 +128,7 @@ Before you start - subscribe to our news channels:
 
 В поле ***MONIKER*** - указываем имя ноды.
 
-В поле ***MNEMONIС*** - вставляем мнемоник фразу от вашего кошелька Defund.
+В поле ***MNEMONIС*** - вставляем мнемоник фразу от вашего кошелька ***Defund***.
 
 В поле ***LINK_KEY*** -  скопируйте ссылку на размещенный priv_validator_key.json (прямое скачивание). 
 
