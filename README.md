@@ -96,6 +96,8 @@ Before you start - subscribe to our news channels:
 
 [Перейти к началу](https://github.com/Dimokus88/defund#defund-validator-node-on-akash-network)
 
+### Спасибо что используете Akash Network!
+
 ## 2. Если у вас есть priv_validator_key.json
 
 > Откройте доступ к файлу на google диск и скопируйте его ссылку, она будет вида:
@@ -141,7 +143,4 @@ Before you start - subscribe to our news channels:
 
 [Перейти к началу](https://github.com/Dimokus88/defund#defund-validator-node-on-akash-network)
 
-
-
-
-
+### Спасибо что используете Akash Network!
