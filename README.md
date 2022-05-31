@@ -29,6 +29,8 @@ Before you start - subscribe to our news channels:
 
 # English version
 
+Fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSfqw1F6cDCsEt1Qmn70oIp3tdvcPFvRyk9Nd4mFacelhzQFYA/viewform) .
+
 > If you want to migrate your Defund node to Akash, or if you have priv_validator_key.json, then go [to this step](https://github.com/Dimokus88/defund#if-you-have-priv_validator_keyjson).
 
 >You must have more than ***5 AKT*** on your Akash wallet (5 АКТ will be blocked for deployment + transaction gas payment). АКТ can be found on the exchanges Gate, AsendeX, Osmosis . Also in our community[Akash RU](https://t.me/akash_ru) we regularly hold events in which we distribute АКТ.
@@ -157,6 +159,9 @@ We are waiting for the completion of the deployment.
 ### Thank you for choosing Akash Network!
 
 # Русская версия
+
+Заполняем [форму](https://docs.google.com/forms/d/e/1FAIpQLSfqw1F6cDCsEt1Qmn70oIp3tdvcPFvRyk9Nd4mFacelhzQFYA/viewform) .
+
 > Если хотите перенести вашу ноду на Akash, или у вас есть priv_validator_key.json, то перейдите [к этому пункту](https://github.com/Dimokus88/defund#%D0%B5%D1%81%D0%BB%D0%B8-%D1%83-%D0%B2%D0%B0%D1%81-%D0%B5%D1%81%D1%82%D1%8C-priv_validator_keyjson).
 
 > На вашем кошельке ```Akash``` (с которого будет разворачивать ***Defund***) должно быть более ***5 АКТ*** (5 АКТ будут заблокированы на развертывание + оплата газа транзакций). АКТ можно пробрести на биржах ```Gate```, ```AsendeX```, ```Osmosis``` . Так же в нашем сообществе [Akash RU](https://t.me/akash_ru) мы регулярно проводим эвенты в которых раздаем АКТ.
