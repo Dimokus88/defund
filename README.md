@@ -25,6 +25,32 @@ Before you start - subscribe to our news channels:
 [English version](https://github.com/Dimokus88/oasys/blob/main/README.md#english-version) | [Русская версия](https://github.com/Dimokus88/defund#%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F)
   
 </div>
+# English version
+> Если хотите перенести вашу ноду на Akash, или у вас есть priv_validator_key.json, то перейдите [к этому пункту](https://github.com/Dimokus88/defund#2-%D0%B5%D1%81%D0%BB%D0%B8-%D1%83-%D0%B2%D0%B0%D1%81-%D0%B5%D1%81%D1%82%D1%8C-priv_validator_keyjson).
+
+>You must have more than ***5 AKT*** on your Akash wallet (5 АКТ will be blocked for deployment + transaction gas payment). АКТ can be found on the exchanges Gate, AsendeX, Osmosis . Also in our community[Akash RU](https://t.me/akash_ru) we regularly hold events in which we distribute АКТ.
+
+## 1. Если запуск производится впервые:
+
+***Создайте дополнительный кошелек экосистемы Cosmos для проекта Defund, с помощью Keplr или Cosmostation. Перепишите seed фразу от созданного кошелька, она понадобится нам при развертке.***
+
+* Open ***Akashlytics***,if you don't have it installed, then [link for download](https://www.akashlytics.com/deploy).
+
+* We check the presence of a balance  ***(>5АКТ)*** and the presence of an installed certificate.
+
+![image](https://user-images.githubusercontent.com/23629420/165339432-6f053e43-4fa2-4429-8eb7-d2fc66f47c70.png)
+
+* Click ***CREATE DEPLOYMENT***. Select ***Empty*** and copy the contents there [deploy.yml]
+
+Let's take a look at what is there, so the ```services``` section indicates the ```docker``` node image, as well as a block with environment variables ```env```:
+
+* ```my_root_password``` - password  ```root``` user, for connection to container via ```ssh```.
+* ```MONIKER```       - Node name .
+* ```MNEMONIС```      -  insert the mnemonic phrase from your wallet ***Defund***.
+* ```LINK_ADDRBOOK```       - link addrbook.json
+* ```SNAP_RPC```      - link RPC node.
+> ***LINK_KEY*** -  comment out the link to the hosted priv_validator_key.json (direct download). If you do not have this file, comment out the line with the # symbol.
+
 
 # Русская версия
 > Если хотите перенести вашу ноду на Akash, или у вас есть priv_validator_key.json, то перейдите [к этому пункту](https://github.com/Dimokus88/defund#2-%D0%B5%D1%81%D0%BB%D0%B8-%D1%83-%D0%B2%D0%B0%D1%81-%D0%B5%D1%81%D1%82%D1%8C-priv_validator_keyjson).
@@ -43,7 +69,7 @@ Before you start - subscribe to our news channels:
 
 * Нажимаем ```CREATE DEPLOYMENT```. Выбираем ```Empty```(пустой template) и копируем туда содержимое [deploy.yml](https://github.com/Dimokus88/defund/blob/main/deploy.yml) .
 
-Давайте раберем что там есть, итак раздел ```services``` здесь указывается ```docker``` образ ноды, а также блок с переменными окружения ```env```:
+Раберем что там есть, итак раздел ```services``` здесь указывается ```docker``` образ ноды, а также блок с переменными окружения ```env```:
 
 В поле ***my_root_password*** - задаем пароль root для подключения по ssh.
 
@@ -55,7 +81,7 @@ Before you start - subscribe to our news channels:
 
 В поле ***SNAP_RPC*** - ссылка на ***RPC*** ноду, для начала синхронизации с последних блоков (рекомендуется) .
 
-> Поле ***LINK_KEY*** -  оставьте закомментированным ссылка на размещенный priv_validator_key.json (прямое скачивание). Если у вас этого файла нет - закомментируйте строку символом # .
+> Поле ***LINK_KEY*** -  оставьте закомментированным ссылка на размещенный priv_validator_key.json (прямое скачивание).
 
 Ниже, в поле ```resources``` мы выставляем арендуюмую мощность. для ноды ***Defund*** рекомендуется ```2 CPU x 4 GB RAM x 600 GB SSD```. В случае синхронизации с ***RPC*** ноды - мы храним не полный блокчейн, поэтому можно поставить  ```2 CPU x 4 GB RAM x 100 GB SSD```. 
 
