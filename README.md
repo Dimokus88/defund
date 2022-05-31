@@ -100,6 +100,8 @@ Thus, you will get a link to a direct download of the file:
 
 [Go to start](https://github.com/Dimokus88/defund#defund-validator-node-on-akash-network)
 
+[Useful Commands](https://github.com/Dimokus88/defund#useful-commands--%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B)
+
 ### Thank you for choosing Akash Network!
 
 ## If you have priv_validator_key.json
@@ -148,6 +150,8 @@ We are waiting for the completion of the deployment.
 </div>
 
 [Go to start](https://github.com/Dimokus88/defund#defund-validator-node-on-akash-network)
+
+[Useful Commands](https://github.com/Dimokus88/defund#useful-commands--%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B)
 
 ### Thank you for choosing Akash Network!
 
@@ -229,6 +233,8 @@ We are waiting for the completion of the deployment.
 
 [Перейти к началу](https://github.com/Dimokus88/defund#defund-validator-node-on-akash-network)
 
+[Полезные команды](https://github.com/Dimokus88/defund#useful-commands--%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B)
+
 ### Спасибо что используете Akash Network!
 
 ## Если у вас есть priv_validator_key.json
@@ -282,6 +288,8 @@ We are waiting for the completion of the deployment.
 </div>
 
 [Перейти к началу](https://github.com/Dimokus88/defund#defund-validator-node-on-akash-network)
+
+[Полезные команды](https://github.com/Dimokus88/defund#useful-commands--%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B)
 
 ### Спасибо что используете Akash Network!
 
