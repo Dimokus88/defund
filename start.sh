@@ -66,7 +66,6 @@ do
 	echo =============Проверка баланса...=================
 	echo =================================================
 	balance=`curl -s https://defund.api.explorers.guru/api/accounts/$address/balance | jq .spendable.amount`
-	echo Ваш баланс: $balance ufetf
 	sleep 5
 	if [[ `echo $balance` -gt 1000000 ]]
 	then
@@ -89,7 +88,7 @@ do
 		echo ======================================================================
 	fi
 	#===============СБОР НАГРАД И КОМИССИОННЫХ===================
-	reward==`curl -s https://sei.api.explorers.guru/api/accounts/$address/balance | jq .spendable.reward`
+	reward==`curl -s https://sei.api.explorers.guru/api/accounts/$address/balance | jq .reward.amount`
 	echo ==============================
 	echo ==Ваши награды: $reward usei==
 	echo ===Your reward $reward usei===
