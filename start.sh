@@ -30,9 +30,11 @@ SYNH(){
 		source $HOME/.bashrc
 	fi
 	echo =====Ваш адрес defund=====
+	echo ===Your address defund====
 	echo $address
 	echo ==========================
-	echo =====Ваш адрес valoper=====
+	echo =====Your valoper=====
+	echo ======Ваш valoper=====
 	echo $valoper
 	echo ===========================
 	date
@@ -86,6 +88,26 @@ do
 		echo ==============Недостаточный баланс для делегирования==================
 		echo ======================================================================
 	fi
+	#===============СБОР НАГРАД И КОМИССИОННЫХ===================
+	reward==`curl -s https://sei.api.explorers.guru/api/accounts/$address/balance | jq .spendable.reward`
+	echo ==============================
+	echo ==Ваши награды: $reward usei==
+	echo ===Your reward $reward usei===
+	echo ==============================
+	sleep 5
+		if [[ `echo $reward` -gt 1000000 ]]
+	then
+		echo =============================================================
+		echo ============Rewards discovered, collecting...================
+		echo =============================================================
+		echo =============================================================
+		echo =============Обнаружены награды, собираю...==================
+		echo =============================================================
+		(echo ${PASSWALLET}) | defundd tx distribution withdraw-rewards $valoper --from $address --fees 5000ufetf --commission -y
+		reward=0
+		sleep 5
+	fi
+	#============================================================
 	synh=`curl -s localhost:26657/status | jq .result.sync_info.catching_up`
 	jailed=`curl -s https://defund.api.explorers.guru/api/validators/$valoper | jq -r .jailed`
 	while [[  $jailed == true ]] 
@@ -162,10 +184,12 @@ file=/var/www/html/priv_validator_key.json
 source $HOME/.bashrc
 if  [[ -f "$file" ]]
 then
-	echo Обнаружен priv_validator_key
 	cd /
+	echo ==========priv_validator_key found==========
+	echo ========Обнаружен priv_validator_key========
 	cp /var/www/html/priv_validator_key.json /root/.defund/config/
-	echo  ========Сверьте файл priv_validator_key.json=========
+	echo ========Validate the priv_validator_key.json file=========
+	echo ==========Сверьте файл priv_validator_key.json============
 	cat /root/.defund/config/priv_validator_key.json
 	sleep 5
 
