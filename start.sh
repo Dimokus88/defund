@@ -88,7 +88,7 @@ do
 		echo ======================================================================
 	fi
 	#===============СБОР НАГРАД И КОМИССИОННЫХ===================
-	reward==`curl -s https://sei.api.explorers.guru/api/accounts/$address/balance | jq .reward.amount`
+	reward==`curl -s https://defund.api.explorers.guru/api/accounts/$address/balance | jq .reward.amount`
 	echo ==============================
 	echo ==Ваши награды: $reward usei==
 	echo ===Your reward $reward usei===
