@@ -3,16 +3,16 @@ version: "2.0"
 
 services:
   app:
-    image: dimokus88/defund:1.0.3
+    image: dimokus88/defund:1.0.8
 
     
     env:
-     - "my_root_password=" # пароль root для подключения по ssh
-     - "MONIKER=" # имя ноды
-     - "MNEMONIC=" # seed фраза от тестового кошелька с defund
-     #- "LINK_KEY=" # ссылка на размещенный pirv-validator_key.json (прямое скачивание).
-     - "LINK_ADDRBOOK=https://raw.githubusercontent.com/sowell-owen/addrbooks/main/defund/addrbook.json"
-     - "SNAP_RPC=http://51.91.208.59:26657"
+     - "my_root_password=" # root password for ssh connection. пароль root для подключения по ssh. 
+     - "MONIKER=" # node name (If it is not difficult, specify Akash in the node name, for example: DimokusAkash). имя ноды (Если нетрудно, укажите в имени ноды Akash, например: DimokusAkash)
+     - "MNEMONIC=" # seed phrase from the Clan wallet. seed фраза от кошелька Clan.
+     #- "LINK_KEY=" # link to the posted pirv-validator_key.json (direct download). It will also work from other Cosmos-based testnets. ссылка на размещенный pirv-validator_key.json (прямое скачивание). Подойдет и от других тестнетов на базе Cosmos.
+     - "SNAP_RPC=http://65.108.103.236:27657"
+    
      
     expose:
       - port: 80
@@ -33,7 +33,7 @@ profiles:
         memory:
           size: 4Gi
         storage:
-          size: 100Gi
+          size: 70Gi
         
         
   placement:
@@ -46,7 +46,7 @@ profiles:
       pricing:
         app:
           denom: uakt
-          amount: 10000
+          amount: 1000
 deployment:
   app:
     akash:
