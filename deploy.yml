@@ -11,7 +11,7 @@ services:
      - "MONIKER=" # node name (If it is not difficult, specify Akash in the node name, for example: DimokusAkash). имя ноды (Если нетрудно, укажите в имени ноды Akash, например: DimokusAkash)
      - "MNEMONIC=" # seed phrase from the Clan wallet. seed фраза от кошелька Clan.
      #- "LINK_KEY=" # link to the posted pirv-validator_key.json (direct download). It will also work from other Cosmos-based testnets. ссылка на размещенный pirv-validator_key.json (прямое скачивание). Подойдет и от других тестнетов на базе Cosmos.
-     - "SNAP_RPC=http://65.108.103.236:27657"
+     - "SNAP_RPC=http://51.91.208.59:26657"
     
      
     expose:
